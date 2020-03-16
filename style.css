@@ -1,0 +1,270 @@
+:root {
+  --color: #FF00FF;
+  --color-transparent: rgba(255, 0, 255, 0.1);
+}
+::placeholder {
+  color: black;
+}
+@font-face {
+    font-family: questa;
+    src: url("Questa_Regular.otf") format("opentype");
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+pre{
+  display:inline;
+}
+p{
+  display: inline-block;
+}
+
+p a{
+  color:white;
+  text-decoration:none;
+  display:inline-block;
+  transition: 0.2s;
+}
+
+p a:hover{
+  transform:rotate(360deg);
+}
+
+body{
+  font-size:20px;
+  font-family:questa,Times,serif;
+}
+
+#color{
+  width:400px;
+  height:10px;
+  position: absolute;
+  top:0;
+  left:calc(50vw - 200px );
+  border:none;
+  padding:0;
+  cursor:pointer;
+  background: var(--color);
+}
+
+#name{
+  z-index:1;
+  position:absolute;
+  font-family: 'Montserrat', sans-serif;
+  background: transparent;
+  border:none;
+  top:30px;
+  font-size:40px;
+  text-align:center;
+  width:100vw;
+}
+
+#submit{
+  position:fixed;
+  font-family: 'Montserrat', sans-serif;
+  bottom:20px;
+  font-size:40px;
+  background: transparent;
+  border:none;
+  line-height:0px;
+  left:calc(50vw - 60px);
+  height:40px;
+  width:120px;
+  background: linear-gradient(to top,var(--color) 0px 15px, white 15px);
+  cursor:pointer;
+}
+
+main{
+  width:1024px;
+  position:absolute;
+  left:calc(50vw - 512px );
+  top:60px;
+  background-color: var(--color-transparent);
+  height:calc(100vh - 140px);
+}
+
+section{
+  position:relative;
+  float:left;
+  width:453px;
+  height:calc(100% - 98px);
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+#from{
+  border-right:3px solid black;
+  padding:28px 14px 14px 14px;
+  margin:28px 0 28px 28px;
+}
+
+#to{
+  padding:14px;
+  margin:42px 0 28px 28px;
+  background:white;
+  box-shadow:5px 5px 5px black;
+  width:425px;
+  text-align: center;
+
+}
+
+main .header{
+  position:absolute;
+  top:20px;
+  width:453px;
+  font-size: 12px;
+  text-align: center;
+  display: block;
+}
+
+main .header.left{
+left:28px;
+}
+
+main .header.right{
+left:537px;
+}
+
+details summary {
+  list-style: none;
+  text-transform: capitalize;
+  font-size:30px;
+  line-height:0px;
+  border-bottom:15px solid var(--color);
+  margin-bottom:30px;
+  cursor:pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+summary:focus{
+  outline: none;
+}
+
+details div{
+  position: relative;
+  top: -30px;
+  background-color: var(--color);
+  padding:15px;
+}
+
+details p{
+color:white;
+background-image:url('draghandle.png');
+background-position: right 10px center;
+background-repeat:no-repeat;
+border:3px solid white;
+  padding:3px 20px 3px 3px;
+cursor:grab;
+margin:15px;
+}
+
+details.empty div{
+  background-color: transparent;
+}
+
+details.empty summary{
+  border-bottom:none;
+  margin-bottom:45px;
+}
+
+#to{
+  right:0;
+}
+
+#to p{
+  background: var(--color);
+  color:white;
+  border:3px solid white;
+  cursor:grab;
+  margin:15px 0 0 0;
+  padding:3px;
+}
+
+#to div{
+  margin-top:30%;
+  text-align: center;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.step2{
+  display: none;
+}
+
+main.step1{
+  text-align: center;
+  height:auto;
+  padding-bottom: 80px;
+}
+
+.step1 h1{
+  position:absolute;
+  font-family: 'Montserrat', sans-serif;
+  top:-20px;
+  font-size:40px;
+  font-weight: bold;
+  text-align:center;
+  width:100%;
+}
+
+.step1 p{
+    display: block;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top:40px;
+  width:600px;
+  margin-left:212px;
+}
+
+.step1 p.intro{
+  text-align: left;
+  line-height: 30px;
+  font-size:20px;
+}
+
+.step1 input, .step1 select{
+    cursor:pointer;
+    border:none;
+    width:auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size:40px;
+    color:black;
+    margin-top:50px;
+    font-weight: bold;
+    text-align: center;
+    text-align-last: center;
+    background: linear-gradient(to top,var(--color) 0px 15px, transparent 15px);
+}
+
+.step1 #name1{
+  width:350px;
+}
+
+#loader {
+  border: 3px solid transparent; /* Light grey */
+  border-top: 3px solid var(--color); /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin:200px 0 0 190px;
+  animation: spin 0.5s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

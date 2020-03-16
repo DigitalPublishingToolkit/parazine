@@ -1,0 +1,77 @@
+@font-face {
+    font-family: questa;
+    src: url("Questa_Regular.otf") format("opentype");
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+span{
+    font-size: 11px;
+    font-family: courier,monospace;
+}
+
+body{
+font-family: questa,Times,serif;
+}
+
+article{
+    page-break-inside: avoid;
+}
+
+aside{
+    page-break-inside: avoid;
+    page-break-before: always;
+    page-break-after: always;
+}
+
+aside .preview__text, aside .preview__info{
+    display: none;
+}
+
+h1{
+    font-weight: lighter;
+    font-size: 40px;
+    line-height: 42px;    
+    background: linear-gradient(to top,#FF00FF 0px,#FF00FF 20px, white 20px, white 41px);
+      display: inline;
+}
+h2::before {
+      content: "\A";
+      white-space: pre;
+    }
+h2{
+    font-size: 20px;
+    font-weight: lighter;
+    background: linear-gradient(to top,#FF00FF 0px,#FF00FF 10px, white 10px, white 21px);
+  display: inline;
+    font-style: italic;
+}
+img{
+  position:absolute;
+  right:0;
+  z-index:0;
+  max-width: 100%;
+}
+
+p{
+  background-color: white;
+  line-height: 130%;
+  display: inline;
+    position:relative;
+    z-index:1;
+    width:80%;
+}
+
+footer{
+    display: none;
+}
+
+.column-label{
+    display: none;
+}
+.article__head{
+    margin-bottom:1cm;
+}

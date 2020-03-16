@@ -1,0 +1,184 @@
+@page :first {
+  margin: 0cm;
+}
+@page {
+  margin: 2cm;
+}
+
+@font-face {
+    font-family: questa;
+    src: url("Questa_Regular.otf") format("opentype");
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    position:relative;
+}
+
+span:not(p span){
+    font-size: 11px;
+    font-family: courier,monospace;
+}
+
+body{
+font-family: questa,Times,serif;
+}
+
+footer{
+    display: none;
+}
+
+article{
+    page-break-inside: avoid;
+}
+
+aside{
+    page-break-inside: avoid;
+    page-break-before: always;
+    page-break-after: always;
+    overflow:hidden;
+}
+
+aside .preview__text, aside .preview__info{
+    display: none !important;
+}
+
+.artice__head h1, .artice__head h2{
+    display: inline;
+}
+
+.article__head h1, #cover h1{
+    font-weight: bold;
+    font-size: 3cm;
+    background: linear-gradient(to top, KLEUR 0%, KLEUR 50%, transparent 50%, transparent 100%);
+}
+
+.article__head img{
+    display: none !important;
+}
+
+.column-label{
+    display: none;
+}
+
+.article__bios{
+    display: none;
+}
+
+.article__bios{
+    display: none;
+}
+
+.article__head{
+    margin-bottom:1cm;
+    margin-top:5cm;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: lighter;
+    background: linear-gradient(to top, KLEUR 0%, KLEUR 50%, transparent 50%, transparent 100%);
+    font-style: italic;
+    display: inline;
+}
+h3.quote{
+    display: block;
+    width: 40%;
+    height: 40%;
+    float: right;
+    transform:rotate(270deg);
+    margin:10%;
+}
+h3.quote .lang{
+    font-size:20px;
+}
+h3.quote .kort{
+    font-size:40px;
+}
+
+img, div[id^="att"]{
+  position:absolute;
+  display: block;
+  right:-15mm;
+  z-index:0;
+  page-break-inside: avoid !important;
+  width:50%;
+  transform:rotate(90deg);
+  transform-origin: top right;
+}
+div[id^="att"]{
+  width:40% !important;
+}
+
+div[id^="att"] a{
+  display: block;
+}
+
+div[id^="att"] img{
+  width:100%;
+  margin: 0;
+  transform:none;
+}
+div[id^="att"] .qr{
+  display:none;
+}
+div[id^="att"] p{
+ font-size:9px;
+  margin: 1mm;
+  display:block;
+  text-align:right;
+}
+
+img.qr{
+  width:15mm !important;
+  left:0 !important;
+  margin-left:-15mm !important;
+  right:auto !important;
+}
+.footnotes, .bibliography{
+  display:none;
+}
+
+p{
+  background-color: white;
+  line-height: 130%;
+  position:relative;
+  z-index:1;
+  display:inline;
+  margin-left: 1em;
+  orphans: 3;
+}
+p:before {
+    content: '\A';
+    white-space: pre;
+}
+
+.article__text{
+  width:80%;
+}
+.article__text img{
+  width:80%;
+  margin-right:-20%;
+}
+
+#cover{
+    page-break-after: always;
+    text-align:center;
+}
+#cover div{
+  position:absolute;
+  z-index:0;
+}
+#cover h1{
+  display: inline-block;
+  position: relative;
+  margin-top:3cm;
+  font-size:3cm;
+  z-index:1;
+}
+
+#backcover{
+    page-break-before: always;
+    text-align:center;
+}
